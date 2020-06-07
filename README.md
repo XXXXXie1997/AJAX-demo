@@ -1,8 +1,18 @@
 ## 目前存在的问题
 
+6.6
+
 1. 提示语法错误
    `Uncaught SyntaxError: Cannot use import statement outside a module`
 
-2. 网上说给 script 标签`type="module"`属性。。我也不知道什么原理
-   试了试，出现了新的问题:
-   `Uncaught TypeError: Failed to resolve module specifier "cluster". Relative references must start with either "/", "./", or "../".`
+6.7
+
+报错的 main.js 第一行是怎么来的。。。刚才一看怎么多了
+
+```javascript
+import { getMaxListeners } from "cluster";
+import { getPackedSettings } from "http2";
+```
+
+这么两行。。。
+完全不记得写过啊，注掉之后居然就能用了。。。

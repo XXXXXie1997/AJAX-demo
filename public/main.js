@@ -1,5 +1,5 @@
-import { getMaxListeners } from "cluster";
-import { getPackedSettings } from "http2";
+// import { getMaxListeners } from "cluster";
+// import { getPackedSettings } from "http2";
 
 getCSS.onclick = () => {
   const request = new XMLHttpRequest();
@@ -81,7 +81,9 @@ let n = 1;
 
 getPage.onclick = () => {
   const request = new XMLHttpRequest();
+  console.log(request);
   request.open("get", `/page${n + 1}`);
+  console.log(request.open);
   request.onreadystatechange = () => {
     if (request.readyState === 4 && request.status === 200) {
       console.log(request.response);

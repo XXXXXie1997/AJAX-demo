@@ -2,8 +2,9 @@
 
 6.6
 
-1. 提示语法错误
-   `Uncaught SyntaxError: Cannot use import statement outside a module`
+提示语法错误:
+
+`Uncaught SyntaxError: Cannot use import statement outside a module`
 
 6.7
 
